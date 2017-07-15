@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web App!</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+
+  <!-- navigation section!-->
+    <nav class="navbar navbar-default navbar-fixed-top ">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="webapp.html">
+          <img src="imgs/logo.png" class="img-responsive">
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target ="#nav-menu" aria-expanded >
+        <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <button id="tweet" class="btn btn-default pull-right visible-xs-block">
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          Tweet
+        </button>
+       <!-- <a href="#" class="btn btn-primary navbar-btn pull-left">Sign up</a>!-->
+      </div>
+      <div id="nav-menu" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden ="true"></span> Home</a></li>
+          <li><a href="#"><span class="badge">10</span><span class="glyphicon glyphicon-bell" aria-hidden ="true"></span> Notifications</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden ="true"></span> Messages</a></li>
+          <li class="visible-xs-inline"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profile</a></li>
+           <li class="visible-xs-inline"><a href="#"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout</a></li>
+       
+        </ul>
+        
+        <button id="tweet" class="btn btn-default pull-right hidden-xs">
+          <span class="glyphicon glyphicon-pencil " aria-hidden="true"></span>
+          Tweet
+        </button>
+        <div id="nav-options" class="btn-group pull-right hidden-xs">
+          <button type="button" class="btn btn-default dropdown-toggle thumbnail" data-toggle ="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="img-responsive" src="imgs/solomon.jpg">
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Setting</a></li>
+            <li role="separator" class="divider" ></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+        <form id="search" role="search" class="hidden-xs hidden-sm">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search..."><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </div>
+      </form>
+      </div>
+      
+    </div>
+  </nav>
+  <!--End of navigation section!-->
+   <!--Page content-->
+  <div class="container">
+    <div class="row">
+      <!--profile section-->
+      <div  class="col-md-3 ">
+      <div id="profile-resume" class="card">
+        <img class="card-img-top img-responsive" src="imgs/solomonnmercy32_06_06_2017.jpg">
+         <div class="card-block">
+           <img src="imgs/solomon.jpg" class="card-img">
+           <h4 class="card-title">Solomon Onaiwu <small>@solomononaiwu</small></h4>
+           <p class="card-text">Even when love isn't enough..... Somehow it is !!!...</p>
+           <ul class="list-inline list-unstyled">
+             <li id="card-tweet">
+                 <a href="#">
+                   <span class="profile-stats">Tweet</span>
+                   <span class="profile-value">99k</span>
+                 </a>
+             </li>
+             <li class="card-following">
+                 <a href="#">
+                   <span class="profile-stats">Following</span>
+                   <span class="profile-value">7</span>
+                 </a>
+             </li>
+             <li class="card-follower">
+                 <a href="#">
+                   <span class="profile-stats">Follower</span>
+                   <span class="profile-value">132k</span>
+                 </a>
+             </li>
+           </ul>
+         </div>
+      </div>
+      <div id="profile-photo" class="card hidden-xs hidden-sm">
+        <div class="card-header">Photos</div>
+        <div class="card-block">
+          <ul class="list-inline list-unstyled">
+            <li><a href="" class="thumbnail"><img src="imgs/mercy1.jpg" class="img-responsive"></a></li>
+            <li><a href="" class="thumbnail"><img src="imgs/IMG-20170521-WA0001.jpg" class="img-responsive"></a></li>
+            <li><a href="" class="thumbnail"><img src="imgs/IMG-20170525-WA0002.jpg" class="img-responsive"></a></li>
+            <li><a href="" class="thumbnail"><img src="imgs/solomon.jpg" class="img-responsive"></a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+       <!--end of profile section-->
+       <!--Main section-->
+      <div id="main" class=" col-sm-12 col-md-6">
+     <ol class="breadcrumb card">
+       <li><a href="">Home</a></li>
+       <li><a href="">Profile</a></li>
+       <li class="active">Feed</li>
+     </ol>
+        <div id="main-card" class="card">
+        <form id="new-message">
+         <div class="input-group">
+             <input class="form-control" placeholder="What is happening?">
+             <span class="input-group-addon">
+               <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+             </span>
+         </div>
+          </form>
+          <ul id="feed" class="list-unstyled">
+            <li>
+              <img class="feed-avatar img-circle" src="imgs/solomon.jpg">
+               <div class="feed-post">
+                 <h5>Onaiwu solomon <small>@paddysolo - 45min</small></h5>
+                 <p>Even when love isn't enough..... Somehow it is !!!...</p>
+               </div>
+               <div class="action-list">
+                 <a href="">
+                   <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+                 </a>
+                 <a href="">
+                   <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                   <span class="retweet-count">6</span>
+                 </a>
+                 <a href="">
+                   <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                 </a>
+                 
+               </div>
+            </li>
+            <li>
+              <img class="feed-avatar img-circle" src="imgs/mercy1.jpg">
+               <div class="feed-post">
+                 <h5>Mercy okoduwa <small>@magnificient - 1hr</small></h5>
+                 <p>Mentally. Physically. She is empowered by her ability to be her own person and to be able to take care of herself and those around her…putting a smile on the faces of those around her…Her passion is beautiful. She is wildly passionate about the things and people she loves. She has no fears about being herself, expressing herself….She is simply amazing ….and  her  beauty ooh my!!!!!...GORGEOUS</p>
+               </div>
+               <div class="action-list">
+                 <a href="">
+                   <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+                 </a>
+                 <a href="">
+                   <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                   <span class="retweet-count">13</span>
+                 </a>
+                 <a href="">
+                   <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                 </a>
+                 
+               </div>
+            </li>
+          </ul>
+        </div>
+        <nav class="text-center">
+          <ul class="pagination pagination-lg">
+            <li class="disabled"><a href="#" aria-label="previous"><span aria-hidden="true">&laquo;</span></a></li>
+            <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+            <li><a href="#">2</a></li>
+            <li class="disabled"><a href="#">...</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li ><a href="#" aria-label="next"><span aria-hidden="true">&raquo;</span></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!--End of Main section-->
+       <!--left section-->
+      <div id="right-content" class="col-xs-12 col-md-3 ">
+        <div id="who-follow" class="card">
+          <div class="card-header">Who to follow</div>
+          <div class="card-block">
+          <ul class="list-unstyled">
+            <li>
+              <img src="imgs/mercy1.jpg" class="img-rounded">
+              <div class="info">
+                <strong>Mercy okoduwa</strong>
+                <button  class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Follow</button>
+               </div>
+            </li>
+            <li>
+              <img src="imgs/buchi.jpg" class="img-rounded">
+              <div class="info">
+                <strong>Buchi okpaleke</strong>
+                <button  class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Follow</button>
+               </div>
+            </li>
+          </ul>
+          </div> 
+      </div>
+       <div id="profile-photo" class="card visible-xs visible-sm hidden-md">
+        <div class="card-header">Photos</div>
+        <div class="card-block">
+          <ul class="list-inline list-unstyled">
+            <li><a href="" class="thumbnail"><img src="imgs/mercy1.jpg" class="img-responsive"></a></li>
+            <li><a href="" class="thumbnail"><img src="imgs/IMG-20170521-WA0001.jpg" class="img-responsive"></a></li>
+            <li><a href="" class="thumbnail"><img src="imgs/IMG-20170525-WA0002.jpg" class="img-responsive"></a></li>
+            <li><a href="" class="thumbnail"><img src="imgs/solomon.jpg" class="img-responsive"></a></li>
+          </ul>
+        </div>
+      </div>
+    
+   
+      <div id="app-info" class="card">
+            <div class="card-block">
+              @2017 SampleApp by Onaiwu solomon
+              <ul class="list-unstyled list-inline">
+                <li><a href="#">About</a></li>
+                 <li><a href="#">Terms and Privacy</a></li>
+                  <li><a href="#">Help</a></li>
+                   <li><a href="#">Status</a></li>
+                    <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="#">Connect other address book</a>
+            </div>
+    </div>
+  </div><!--End of left section-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

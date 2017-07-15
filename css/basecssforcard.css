@@ -1,0 +1,16 @@
+body{
+	background-color: #f5fafc;
+	padding: 5em;
+}
+.card{
+	border: 0.1rem solid #e5e5e5;
+	background-color: #fff;
+	border-radius: 0.4em;
+	width: 20%;
+}
+.card-img-top {
+	border-radius: 0.4em 0.4em 0 0;
+}
+.card-block {
+	padding: 1.25rem;
+}
